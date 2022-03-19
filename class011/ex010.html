@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>Fine System!</h1>
+    Car Speed: <input type="number" name="txtvel" id="txtvel"> Km/h
+    <input type="button" value="Check!" onclick="Cheking()"> <!-- Here we have a DOOM's event, the onclick-->
+    <div id="res"> Result: </div>
+    <script>
+        function Cheking () {
+        var txtv = window.document.querySelector("input#txtvel");
+        var res = window.document.querySelector("div#res");
+        var vel = Number.parseFloat(txtv.value);
+        res.innerHTML = `<p>Your current speed is <strong>${vel}</strong> Km/h</p>`
+        if (vel > 60) {
+            res.innerHTML += `<p>You're <strong>fined</strong> for speed too fast!!!</p>`
+        }
+        res.innerHTML += `<p>Always driving with security belt!</p>`
+        }
+    </script>
+</body>
+</html>
