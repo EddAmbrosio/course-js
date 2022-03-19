@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM's Events</title>
+    <style>
+        div#area {
+            background: rgb(3, 139, 3);
+            color: white;
+            width: 200px;
+            height: 200px;
+            text-align: center;
+            line-height: 200px;
+            font-size: 2em;
+        }
+    </style>
+</head>
+<body>
+    <div id="area">
+        Interact...
+
+    </div>
+    <script>
+        var a = window.document.querySelector("div#area");
+        a.addEventListener("click", klick);
+        a.addEventListener("mouseenter", ent3r);
+        a.addEventListener("mouseout", got_out);
+
+        function klick() {
+            a.innerText = "Clicked";
+            a.style.background = "red"
+        }
+        function ent3r() {
+            a.innerText = "It Boarded!"
+        }
+        function got_out() {
+            a.innerText = "Got Out!"
+            a.style.background = "Green"
+        }
+    </script>
+</body>
+</html>
