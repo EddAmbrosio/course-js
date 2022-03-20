@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge</title>
+    <style>
+        body {
+            background-color: rgb(43, 72, 109);
+            color: white;
+            font-size: 1.8em;
+        }
+
+        #country {
+            width: 100px;
+            border-radius: 5px;
+        }
+
+        #stylbott {
+            background-color: rgb(41, 118, 163);
+            padding: 10px;
+            width: 600px;
+            border-radius: 8px;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <div id="stylbott">
+        <p>
+            Which country do you come from?
+            <input type="text" name="country" id="country">
+            <input type="button" value="Check!" onclick="phaph()">
+        </p>
+        <div id="res">
+            So, you are a...
+        </div>
+    </div>
+    <script>
+        function phaph() {
+            var a = window.document.querySelector("input#country").toLowerCase();
+            res = window.document.querySelector("div#res");
+            if (a.value == "brazil") {
+                res.innerHTML += "<p>You're a <strong>brazilian</strong>!</p>" 
+            } else {
+                res.innerHTML += "<p>You're a <strong>foreigner</strong>!</p>"
+            }
+        }
+    </script>
+</body>
+</html>
