@@ -12,7 +12,7 @@
             font-size: 1.8em;
         }
 
-        #country {
+        .country {
             width: 100px;
             border-radius: 5px;
         }
@@ -30,21 +30,22 @@
     <div id="stylbott">
         <p>
             Which country do you come from?
-            <input type="text" name="country" id="country">
-            <input type="button" value="Check!" onclick="phaph()">
+            <input type="text" name="country" class="country">
+            <input type="button" value="Check!" onclick="paph()">
         </p>
         <div id="res">
             So, you are a...
         </div>
     </div>
     <script>
-        function phaph() {
-            var a = window.document.querySelector("input#country").toLowerCase();
-            res = window.document.querySelector("div#res");
-            if (a.value == "brazil") {
-                res.innerHTML += "<p>You're a <strong>brazilian</strong>!</p>" 
-            } else {
-                res.innerHTML += "<p>You're a <strong>foreigner</strong>!</p>"
+        function paph() {
+            var country = window.document.querySelector("input.country")
+            var res = window.document.querySelector("div#res")
+            if (country.value.toLowerCase() == "brazil", "brasil") {
+                res.innerHTML = "<p>You're a <strong>brazilian</strong>!</p>" 
+            } 
+            else {
+                res.innerHTML = "<p>You're a <strong>foreigner</strong>!</p>"
             }
         }
     </script>
