@@ -23,3 +23,13 @@ footer {
     color: #AC9969;
     text-align: center;
 }
+
+div#res {
+    background-color: aliceblue;
+    width: 250px;
+    font-size: 1em;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    margin: auto;
+    border-radius: 8px;
+}
