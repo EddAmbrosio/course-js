@@ -23,3 +23,10 @@ footer {
     color: #AC9969;
     text-align: center;
 }
+
+select#table {
+    overflow: hidden;
+    padding: 8px;
+    border-radius: 8px;
+    font-size: 1.2em;   
+}

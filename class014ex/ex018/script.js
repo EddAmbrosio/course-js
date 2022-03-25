@@ -6,16 +6,23 @@ function ch3cking() {
 
     if (start.value.length == 0 || end.value.length == 0 || jump.value.length == 0) {
         window.alert("Data incorrect! Plase type again!")
-    } else {
+    } else if (start.value < end.value) {
         res.innerHTML = "Counting: \u{1F603}"
-        let ns = Number(start.value)
-        let ne = Number(end.value)
-        let nj = Number(jump.value)
-        let nc = ns
+        let s = Number(start.value)
+        let e = Number(end.value)
+        let j = Number(jump.value)
 
-        while(nc <= ne) {
-            res.innerHTML += `${c} `
-            let nc = nc + nj
-        }  
+        for(let c = s; c <= e; c += j) {
+            res.innerHTML += ` ${c} `
+        }
+    } else if (end.value < start.value) {
+        res.innerHTML = "Counting: \u{1F603}"
+        let s = Number(start.value)
+        let e = Number(end.value)
+        let j = Number(jump.value)
+
+        for(let c = s; c >= e; c -= j) {
+            res.innerHTML += ` ${c} `
+        }
     }
 }
