@@ -6,4 +6,4 @@ function oddeven(n) {
     }
 }
 
-console.log(res = oddeven(5))
+console.log(res = oddeven(8))
