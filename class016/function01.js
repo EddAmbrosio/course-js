@@ -1,4 +1,4 @@
-function oddeven(n) {
+/*function oddeven(n) {
     if(n%2==0) {
         return "Even"
     } else {
@@ -6,4 +6,7 @@ function oddeven(n) {
     }
 }
 
-console.log(res = oddeven(8))
+console.log(res = oddeven(8))*/
+
+var vector = []
+console.log(vector)
